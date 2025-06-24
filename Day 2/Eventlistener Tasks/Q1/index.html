@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        .menu{
+            padding: 40px;
+        }
+        .menu ul{
+            list-style: none;
+            padding-left: 20px;
+            display: none;
+        }
+        .menu span {
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .menu span::before {
+            content: '▶ ';
+            color: green;
+            font-size: 80%;
+        }
+        .menu.open span::before{
+            content: '▼ ';
+        }
+        .menu.open ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu option -->
+    <div class="menu">
+        <span onclick="openMenu()">Sweeties (click me)!</span>
+        <ul>
+            <li>Cake</li>
+            <li>Donut</li>
+            <li>Honey</li>
+        </ul>
+    </div>
+    <script>
+        function openMenu(){
+            document.querySelector(".menu").classList.toggle("open");
+        }
+    </script>
+</body>
+
+</html>

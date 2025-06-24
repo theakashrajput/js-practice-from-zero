@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Move emoji left and right -->
+    <div class="main-cont">
+        <button class="arrow arr-left">⇦</button>
+        <div class="emoji-cont">
+            <ul>
+                <li><img src="https://en.js.cx/carousel/1.png"></li>
+                <li><img src="https://en.js.cx/carousel/2.png"></li>
+                <li><img src="https://en.js.cx/carousel/3.png"></li>
+                <li><img src="https://en.js.cx/carousel/4.png"></li>
+                <li><img src="https://en.js.cx/carousel/5.png"></li>
+                <li><img src="https://en.js.cx/carousel/6.png"></li>
+                <li><img src="https://en.js.cx/carousel/7.png"></li>
+                <li><img src="https://en.js.cx/carousel/8.png"></li>
+                <li><img src="https://en.js.cx/carousel/9.png"></li>
+                <li><img src="https://en.js.cx/carousel/10.png"></li>
+            </ul>
+        </div>
+        <button class="arrow arr-right">⇨</button>
+    </div>
+    <script>
+        let rightArr = document.querySelector(".arr-right");
+        let leftArr = document.querySelector(".arr-left");
+        let list = document.querySelector(".emoji-cont");
+
+        let position = 0;
+        let step = 130;
+        let maxPosition = -7;
+
+        rightArr.addEventListener('click', () => {
+            if (position > maxPosition) {
+                position--;
+                list.querySelector("ul").style.transform = `translateX(${position * step}px)`;
+            }
+        })
+        leftArr.addEventListener('click', () => {
+            if (position < 0) {
+                position++;
+                list.querySelector("ul").style.transform = `translateX(${position * step}px)`;
+            }
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+    <!-- Character Count on Input -->
+    <input id="input" type="text">
+    <div id="count">
+        Character Count: <span>0</span>
+    </div>
+    <script>
+        let count = 0;
+        document.querySelector("#input").addEventListener('input', ()=>{
+            count++;
+            document.querySelector("#count>span").textContent = count;
+        })
+    </script>
+</body>
+</html>

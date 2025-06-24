@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'gilroy';
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.pane{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 50px;
+    border: 2px solid #c4df9b;
+    padding: 10px;
+    background-color: #edf5e1;
+}
+
+.pane-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    margin-bottom: 8px;
+}
+
+.remove-button{
+    cursor: pointer;
+    color: red;
+    border: none;
+    font-size: 18px;
+}
