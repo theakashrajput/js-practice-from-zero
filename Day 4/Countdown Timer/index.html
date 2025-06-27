@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pannel">
+        <span class="min">0</span><span class="min">0</span>:<span class="sec">0</span><span class="sec">0</span>
+    </div>
+    <form id="inputPannel">
+        <div>
+            <input type="text" placeholder="Enter time in seconds" id="timeInput" required>
+            <button type="submit" id="submitBtn" class="btn">Submit</button>
+        </div>
+        <div>
+            <button id="timerStartBtn" class="btn" type="button">Start Timer</button>
+            <button id="pauseBtn" class="btn" type="button">Pause</button>
+            <button type="reset" id="resetBtn" class="btn">Reset Timer</button>
+        </div>
+    </form>
+    <audio id="alarmSound" src="./mixkit-quick-win-video-game-notification-269.wav"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
